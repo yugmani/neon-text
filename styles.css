@@ -6,8 +6,10 @@
 
 body {
   font-size: 18px;
-  font-family: "Vibur", sans-serif;
+  /* font-family: "Vibur", sans-serif; */
+  font-family: "Sacramento", sans-serif;
   background-color: #010a01;
+  background-image: url("https://images.unsplash.com/photo-1495578942200-c5f5d2137def?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1054&q=80");
 }
 
 h1,
@@ -28,15 +30,14 @@ h2 {
   margin-top: 30px;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.glow-text {
-  margin: 0 auto;
+.glow-text,
+.flicker-text,
+.pulsate-text {
   width: 350px;
-  border: 1px solid lightslategray;
-  border-radius: 15px;
 }
 
 p {
@@ -59,5 +60,44 @@ p {
   53%,
   57%,
   100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
   }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.flicker-text h1 {
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* PULSATING GLOW */
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #f09,
+      0 0 73px #f09, 0 0 80px #f09, 0 0 94px #f09, 0 0 140px #f09;
+  }
+}
+
+.pulsate-text h1 {
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+
+h1 {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
 }
