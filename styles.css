@@ -73,6 +73,11 @@ p {
 
 .flicker-text h1 {
   animation: flicker 1.5s infinite alternate;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #1ee40c,
+    0 0 0.8rem #1ee40c, 0 0 2.8rem #1ee40c, inset 0 0 1.3rem #1ee40c;
 }
 
 /* PULSATING GLOW */
@@ -80,8 +85,8 @@ p {
 @keyframes pulsate {
   100% {
     /* Larger blur radius */
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
-      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #ffff00,
+      0 0 80px #ffff00, 0 0 90px #ffff00, 0 0 100px #ffff00, 0 0 150px #ffff00;
   }
   0% {
     /* Smaller blur radius */
@@ -92,12 +97,17 @@ p {
 
 .pulsate-text h1 {
   animation: pulsate 0.11s ease-in-out infinite alternate;
-}
-
-h1 {
   border: 0.2rem solid #fff;
   border-radius: 2rem;
   padding: 0.4em;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.glow-text h1 {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f10a0a,
+    0 0 0.8rem #f10a0a, 0 0 2.8rem #f10a0a, inset 0 0 1.3rem #f10a0a;
 }
